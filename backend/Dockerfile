@@ -1,7 +1,7 @@
-FROM node:20-alpine 
+FROM node:20-alpine
 WORKDIR /app
-COPY package *.json ./
+COPY package*.json ./
 RUN npm install --production
-COPY ..
+COPY . .
 EXPOSE 5000
-CMD ["node" , "index.js"]
+CMD ["node", "index.js"]
